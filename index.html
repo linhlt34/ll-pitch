@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSC Strategy Presentation - Full Deck (1-17)</title>
+    <title>BSC Strategy Presentation - Final Complete Deck</title>
     
     <!-- 1. LIBRARIES -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -48,7 +48,9 @@
 
         /* ZONES */
         .header-zone { height: 140px; width: 100%; padding: 0 80px; display: flex; align-items: center; justify-content: flex-end; position: absolute; top: 0; left: 0; z-index: 100; transition: opacity 0.5s; }
-        .content-zone { margin-top: 140px; height: calc(1080px - 140px); padding: 20px 80px 60px 80px; display: flex; flex-direction: column; }
+        
+        /* CONTENT ZONE: Increased bottom padding to prevent overlap with Nav */
+        .content-zone { margin-top: 140px; height: calc(1080px - 140px); padding: 20px 80px 120px 80px; display: flex; flex-direction: column; }
 
         /* TYPOGRAPHY */
         .h1-title { font-family: 'Playfair Display', serif; font-size: 88px; font-weight: 800; color: #0b5855; line-height: 1.1; letter-spacing: -0.02em; }
@@ -60,30 +62,69 @@
         .metric-card { background: white; border: 1px solid #e2e8f0; border-radius: 24px; padding: 48px; display: flex; flex-direction: column; justify-content: space-between; height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .metric-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -5px rgba(11, 88, 85, 0.1); border-color: #e3b768; }
         
-        /* Slide 1 Decorations */
+        /* Slide Decorations */
         .wave-bg { position: absolute; bottom: 0; right: 0; width: 60%; height: 100%; background: linear-gradient(135deg, #eef6f6 0%, #fff 100%); clip-path: ellipse(100% 80% at 90% 90%); z-index: -1; }
         .wave-accent { position: absolute; bottom: -50px; right: -50px; width: 600px; height: 600px; border: 2px solid #e3b768; border-radius: 50%; opacity: 0.1; z-index: -1; }
-
-        /* Slide 5 (House) Shapes */
         .house-roof { clip-path: polygon(50% 0%, 100% 100%, 0% 100%); }
-        
-        /* Slide 13 (Stairs) */
         .stair-step { position: absolute; bottom: 0; width: 30%; background: white; border: 1px solid #e2e8f0; border-radius: 24px 24px 0 0; padding: 32px; box-shadow: 0 -10px 30px rgba(0,0,0,0.05); transition: all 0.3s; }
         .stair-step:hover { transform: translateY(-10px); box-shadow: 0 -20px 40px rgba(11, 88, 85, 0.1); }
-
-        /* Slide 14 (Risk) */
         .risk-box { border-radius: 20px; padding: 30px; height: 100%; border: 2px solid transparent; transition: all 0.3s ease; display: flex; flex-direction: column; }
         .risk-critical { background: #fff1f2; border-color: #fecaca; }
         .risk-monitor { background: #fffbeb; border-color: #fde68a; } 
         .risk-accept { background: #ecfdf5; border-color: #a7f3d0; }
         .risk-manage { background: #eff6ff; border-color: #bfdbfe; }
-
-        /* Slide 15 (Ask) */
         .btn-ask { background: white; border: 1px solid #e2e8f0; border-radius: 24px; padding: 50px; display: flex; align-items: center; gap: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: all 0.3s; cursor: pointer; }
         .btn-ask:hover { border-color: #e3b768; transform: translateX(15px); box-shadow: 0 20px 40px rgba(227, 183, 104, 0.15); }
-
-        /* Final Background */
         .final-bg { background: radial-gradient(circle at center, #0b5855 0%, #002e2c 100%); color: white; }
+
+        /* === NEW NAVIGATION STYLE (Bottom Right, Glassmorphism) === */
+        .nav-container {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.6); /* Glass effect */
+            backdrop-filter: blur(12px);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.5);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .nav-btn:hover {
+            background-color: #fff;
+            color: #0b5855;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .nav-indicator {
+            font-family: 'Inter', monospace;
+            font-size: 14px;
+            font-weight: 600;
+            color: #475569;
+            min-width: 60px;
+            text-align: center;
+            user-select: none;
+        }
     </style>
 </head>
 <body>
@@ -132,15 +173,14 @@
             </div>
         </div>
 
-        <!-- ================= SLIDE 2: AGENDA (NEW) ================= -->
+        <!-- ================= SLIDE 2: AGENDA ================= -->
         <div id="slide-2" class="slide">
             <div class="content-zone">
                 <div class="mb-12 border-b-2 border-slate-200 pb-6">
                     <p class="subtitle">Tổng quan</p>
                     <h2 class="h2-title">Cấu trúc Chiến lược</h2>
                 </div>
-                <div class="grid grid-cols-4 gap-8 flex-grow pb-8">
-                    <!-- Item 1 -->
+                <div class="grid grid-cols-4 gap-8 flex-grow">
                     <div class="group relative bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
                         <div class="absolute -right-4 -top-4 text-[120px] font-serif font-bold text-slate-100 group-hover:text-bidv-light transition-colors z-0">1</div>
                         <div class="relative z-10 flex flex-col h-full">
@@ -150,7 +190,6 @@
                             <div class="mt-auto pt-6 border-t border-slate-100"><span class="text-sm font-bold text-slate-400 uppercase tracking-widest">Phần 01</span></div>
                         </div>
                     </div>
-                    <!-- Item 2 -->
                     <div class="group relative bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
                         <div class="absolute -right-4 -top-4 text-[120px] font-serif font-bold text-slate-100 group-hover:text-[#fff8e6] transition-colors z-0">2</div>
                         <div class="relative z-10 flex flex-col h-full">
@@ -160,7 +199,6 @@
                             <div class="mt-auto pt-6 border-t border-slate-100"><span class="text-sm font-bold text-slate-400 uppercase tracking-widest">Phần 02</span></div>
                         </div>
                     </div>
-                    <!-- Item 3 -->
                     <div class="group relative bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
                         <div class="absolute -right-4 -top-4 text-[120px] font-serif font-bold text-slate-100 group-hover:text-bsc-light transition-colors z-0">3</div>
                         <div class="relative z-10 flex flex-col h-full">
@@ -170,7 +208,6 @@
                             <div class="mt-auto pt-6 border-t border-slate-100"><span class="text-sm font-bold text-slate-400 uppercase tracking-widest">Phần 03</span></div>
                         </div>
                     </div>
-                    <!-- Item 4 -->
                     <div class="group relative bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
                         <div class="absolute -right-4 -top-4 text-[120px] font-serif font-bold text-slate-100 group-hover:text-teal-50 transition-colors z-0">4</div>
                         <div class="relative z-10 flex flex-col h-full">
@@ -194,8 +231,7 @@
                     </div>
                     <div class="px-8 py-3 bg-[#fff8e6] text-[#e3b768] border border-[#e3b768]/30 rounded-xl font-bold text-2xl tracking-widest">TẦM NHÌN 2030</div>
                 </div>
-                <div class="grid grid-cols-3 gap-10 flex-grow pb-8">
-                    <!-- Card 1 -->
+                <div class="grid grid-cols-3 gap-10 flex-grow">
                     <div class="metric-card border-t-[12px] border-t-bidv-main">
                         <div>
                             <div class="flex items-center gap-4 mb-8">
@@ -212,7 +248,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Card 2 -->
                     <div class="metric-card border-t-[12px] border-t-[#e3b768] shadow-2xl transform scale-105 z-10">
                         <div>
                             <div class="flex items-center gap-4 mb-8">
@@ -229,7 +264,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Card 3 -->
                     <div class="metric-card border-t-[12px] border-t-bsc-teal">
                         <div>
                             <div class="flex items-center gap-4 mb-8">
@@ -435,7 +469,7 @@
             </div>
         </div>
 
-        <!-- ================= SLIDE 9: TRỤ CỘT 3 ================= -->
+        <!-- ================= SLIDE 9: TRỤ CỘT 3 (FIXED) ================= -->
         <div id="slide-9" class="slide">
             <div class="content-zone">
                 <div class="mb-8 border-b-2 border-slate-200 pb-6">
@@ -443,51 +477,94 @@
                     <h2 class="h2-title">Công nghệ: Auto Invest</h2>
                 </div>
                 <div class="flex-grow flex items-center justify-center">
-                    <div class="relative w-[900px] h-[500px] flex items-center justify-between px-10">
-                        <div class="w-80 h-64 bg-white rounded-3xl shadow-xl border-l-8 border-bidv-main flex flex-col items-center justify-center z-10">
-                            <div class="text-bidv-main text-5xl mb-4"><i class="fa-solid fa-building-columns"></i></div>
+                    <!-- Changed container width to max-w-7xl and added gap -->
+                    <div class="flex items-center justify-center w-full max-w-6xl px-4 gap-8">
+                        
+                        <!-- Left Card (BIDV) -->
+                        <div class="w-80 h-72 bg-white rounded-3xl shadow-card border-l-8 border-bidv-main flex flex-col items-center justify-center z-20 relative hover:scale-105 transition-transform duration-300">
+                            <div class="text-bidv-main text-6xl mb-6"><i class="fa-solid fa-building-columns"></i></div>
                             <h3 class="text-2xl font-bold text-slate-800">TK Thanh toán BIDV</h3>
-                            <p class="text-slate-500 mt-2">Nguồn tiền nhàn rỗi</p>
+                            <p class="text-slate-500 mt-2 font-medium">Nguồn tiền nhàn rỗi</p>
                         </div>
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-40 flex flex-col justify-between pointer-events-none">
-                            <div class="w-full h-16 border-t-4 border-r-4 border-bsc-blue rounded-tr-[50px] absolute top-0 right-[50%] translate-x-[50%] w-[60%]"></div>
-                            <div class="absolute top-[-20px] left-[50%] -translate-x-1/2 bg-bsc-blue text-white px-6 py-2 rounded-full font-bold shadow-md"><i class="fa-solid fa-robot mr-2"></i> SWEEP IN (22h00)</div>
-                            <div class="w-full h-16 border-b-4 border-l-4 border-bsc-teal rounded-bl-[50px] absolute bottom-0 left-[50%] -translate-x-[50%] w-[60%]"></div>
-                            <div class="absolute bottom-[-20px] left-[50%] -translate-x-1/2 bg-bsc-teal text-white px-6 py-2 rounded-full font-bold shadow-md"><i class="fa-solid fa-bolt mr-2"></i> SWEEP OUT (Real-time)</div>
+
+                        <!-- Middle Connection Area (Flexible Width) -->
+                        <div class="flex-1 h-48 relative flex flex-col justify-between py-4">
+                            
+                            <!-- Top Path: Sweep IN (Left to Right) -->
+                            <div class="relative w-full h-12">
+                                <!-- Line -->
+                                <div class="absolute top-1/2 left-0 w-full border-t-4 border-dashed border-bsc-blue opacity-50"></div>
+                                <!-- Arrow Head -->
+                                <div class="absolute top-1/2 right-0 -translate-y-1/2 text-bsc-blue text-2xl"><i class="fa-solid fa-chevron-right"></i></div>
+                                <!-- Label -->
+                                <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 bg-bsc-blue text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg whitespace-nowrap z-10 flex items-center gap-2">
+                                    <i class="fa-solid fa-robot"></i> SWEEP IN (22h00)
+                                </div>
+                            </div>
+
+                            <!-- Bottom Path: Sweep OUT (Right to Left) -->
+                            <div class="relative w-full h-12">
+                                <!-- Line -->
+                                <div class="absolute top-1/2 left-0 w-full border-t-4 border-dashed border-bsc-teal opacity-50"></div>
+                                <!-- Arrow Head -->
+                                <div class="absolute top-1/2 left-0 -translate-y-1/2 text-bsc-teal text-2xl"><i class="fa-solid fa-chevron-left"></i></div>
+                                <!-- Label -->
+                                <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 bg-bsc-teal text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg whitespace-nowrap z-10 flex items-center gap-2">
+                                    <i class="fa-solid fa-bolt"></i> SWEEP OUT (Real-time)
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="w-80 h-64 bg-white rounded-3xl shadow-xl border-r-8 border-bsc-teal flex flex-col items-center justify-center z-10">
-                            <div class="text-bsc-teal text-5xl mb-4"><i class="fa-solid fa-sack-dollar"></i></div>
+
+                        <!-- Right Card (BSC) -->
+                        <div class="w-80 h-72 bg-white rounded-3xl shadow-card border-r-8 border-bsc-teal flex flex-col items-center justify-center z-20 relative hover:scale-105 transition-transform duration-300">
+                            <div class="text-bsc-teal text-6xl mb-6"><i class="fa-solid fa-sack-dollar"></i></div>
                             <h3 class="text-2xl font-bold text-slate-800">Tài khoản BSC</h3>
-                            <p class="text-slate-500 mt-2">Sinh lời tự động</p>
+                            <p class="text-slate-500 mt-2 font-medium">Sinh lời tự động</p>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ================= SLIDE 10: IMPACT ================= -->
+        <!-- ================= SLIDE 10: IMPACT (FIXED LAYOUT) ================= -->
         <div id="slide-10" class="slide">
             <div class="content-zone">
                 <div class="mb-10 border-b-2 border-slate-200 pb-6">
                     <p class="subtitle">Impact Analysis</p>
                     <h2 class="h2-title">Tác động của Auto Invest đến BIDV</h2>
                 </div>
-                <div class="grid grid-cols-3 gap-12 h-[500px]">
-                    <div class="metric-card border-t-[10px] border-t-bidv-main bg-bidv-light/30">
-                        <div class="text-6xl text-bidv-main mb-6"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
-                        <div><div class="text-5xl font-black text-bidv-main mb-2">5.000</div><div class="text-2xl font-bold text-slate-700">Tỷ đồng CASA/Năm</div></div>
-                        <p class="text-xl text-slate-600 mt-6">Huy động nguồn vốn giá rẻ tự động, không tốn chi phí nhân sự bán hàng.</p>
+                
+                <div class="grid grid-cols-3 gap-10 h-full w-full items-start">
+                    
+                    <div class="metric-card border-t-[10px] border-t-bidv-main bg-bidv-light/30 !p-10">
+                        <div class="text-6xl text-bidv-main mb-4"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                        <div class="mb-4">
+                            <div class="text-5xl font-black text-bidv-main mb-1">5.000</div>
+                            <div class="text-2xl font-bold text-slate-700">Tỷ đồng CASA/Năm</div>
+                        </div>
+                        <p class="text-xl text-slate-600">Huy động nguồn vốn giá rẻ tự động, không tốn chi phí nhân sự bán hàng.</p>
                     </div>
-                    <div class="metric-card border-t-[10px] border-t-bidv-gold bg-[#fff8e6]/50">
-                        <div class="text-6xl text-bidv-gold mb-6"><i class="fa-solid fa-percent"></i></div>
-                        <div><div class="text-5xl font-black text-bidv-gold mb-2">30%</div><div class="text-2xl font-bold text-slate-700">Tỷ trọng CASA</div></div>
-                        <p class="text-xl text-slate-600 mt-6">Góp phần quan trọng hiện thực hóa chiến lược bán lẻ 2030 của BIDV.</p>
+
+                    <div class="metric-card border-t-[10px] border-t-bidv-gold bg-[#fff8e6]/50 !p-10">
+                        <div class="text-6xl text-bidv-gold mb-4"><i class="fa-solid fa-percent"></i></div>
+                        <div class="mb-4">
+                            <div class="text-5xl font-black text-bidv-gold mb-1">30%</div>
+                            <div class="text-2xl font-bold text-slate-700">Tỷ trọng CASA</div>
+                        </div>
+                        <p class="text-xl text-slate-600">Góp phần quan trọng hiện thực hóa chiến lược bán lẻ 2030 của BIDV.</p>
                     </div>
-                    <div class="metric-card border-t-[10px] border-t-slate-800 bg-slate-100">
-                        <div class="text-6xl text-slate-800 mb-6"><i class="fa-solid fa-infinity"></i></div>
-                        <div><div class="text-4xl font-black text-slate-800 mb-2 uppercase">Gắn kết</div><div class="text-2xl font-bold text-slate-700">Trọn đời</div></div>
-                        <p class="text-xl text-slate-600 mt-6">Khóa chặt khách hàng trong hệ sinh thái bằng tiện ích tài chính vượt trội.</p>
+
+                    <div class="metric-card border-t-[10px] border-t-slate-800 bg-slate-100 !p-10">
+                        <div class="text-6xl text-slate-800 mb-4"><i class="fa-solid fa-infinity"></i></div>
+                        <div class="mb-4">
+                            <div class="text-4xl font-black text-slate-800 mb-1 uppercase">Gắn kết</div>
+                            <div class="text-2xl font-bold text-slate-700">Trọn đời</div>
+                        </div>
+                        <p class="text-xl text-slate-600">Khóa chặt khách hàng trong hệ sinh thái bằng tiện ích tài chính vượt trội.</p>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -719,11 +796,15 @@
             </div>
         </div>
 
-        <!-- NAVIGATION CONTROLS -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-50 flex gap-4 bg-slate-900/90 backdrop-blur px-8 py-3 rounded-full border border-slate-700 shadow-2xl">
-            <button onclick="changeSlide(-1)" class="text-slate-400 hover:text-white transition-colors text-xl"><i class="fa-solid fa-chevron-left"></i></button>
-            <span id="slide-indicator" class="text-white font-bold self-center font-mono text-lg w-32 text-center">1 / 17</span>
-            <button onclick="changeSlide(1)" class="text-slate-400 hover:text-white transition-colors text-xl"><i class="fa-solid fa-chevron-right"></i></button>
+        <!-- NAVIGATION CONTROLS (FIXED & GLASSMORPHISM) -->
+        <div class="nav-container">
+            <button class="nav-btn" onclick="changeSlide(-1)">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <span id="slide-indicator" class="nav-indicator">1 / 17</span>
+            <button class="nav-btn" onclick="changeSlide(1)">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
 
     </div>
@@ -741,7 +822,7 @@
 
         // 2. NAVIGATION LOGIC
         let currentSlide = 1;
-        const totalSlides = 17; // Updated to 17
+        const totalSlides = 17; 
 
         function changeSlide(direction) {
             document.getElementById(`slide-${currentSlide}`).classList.remove('active');
@@ -769,7 +850,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             Chart.register(ChartDataLabels);
             
-            // Chart 1: Capital Comparison (Slide 4)
+            // Chart 1: Capital Comparison (Slide 4 - but listed as ID in JS logic)
+            // IMPORTANT: The chart is in Slide 4 (Urgency)
             const ctx1 = document.getElementById('capitalChart').getContext('2d');
             new Chart(ctx1, {
                 type: 'bar',
