@@ -49,7 +49,6 @@
 
         /* ZONES */
         .header-zone { height: 140px; width: 100%; padding: 0 80px; display: flex; align-items: center; justify-content: flex-end; position: absolute; top: 0; left: 0; z-index: 100; transition: opacity 0.5s; pointer-events: none; }
-        /* Increased bottom padding to ensure content doesn't hit nav bar */
         .content-zone { margin-top: 140px; height: calc(1080px - 140px); padding: 20px 80px 160px 80px; display: flex; flex-direction: column; }
         .content-zone-full { margin-top: 0; height: 100%; padding: 60px 80px; display: flex; flex-direction: column; }
 
@@ -306,7 +305,13 @@
                         <span class="w-16 h-1.5 bg-bidv-gold rounded-full"></span>
                         <span class="text-bidv-gold font-bold uppercase tracking-[0.2em] text-lg">Chiến lược 2026 - 2030</span>
                     </div>
-                    <h1 class="h1-title mb-6">VƯỢT SÓNG <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-bidv-main to-bsc-teal">CHUYỂN ĐỔI</span></h1>
+                    
+                    <!-- SỬA: Thêm 'leading-normal' (giãn dòng) và 'inline-block py-2' (nới vùng hiển thị cho span) để không cắt dấu -->
+                    <h1 class="h1-title mb-6 leading-normal pb-2">
+                        VƯỢT SÓNG <br>
+                        <span class="inline-block text-transparent bg-clip-text bg-gradient-to-r from-bidv-main to-bsc-teal py-2">CHUYỂN ĐỔI</span>
+                    </h1>
+                    
                     <h2 class="text-5xl font-light text-slate-600 mb-12">Tái định vị BSC <strong style="color: #e3b768;">Dẫn đầu Kỷ nguyên số</strong></h2>
                     <div class="flex items-start gap-8 mb-20">
                         <div class="w-2 h-32 bg-gradient-to-b from-bidv-main to-bsc-blue rounded-full"></div>
@@ -323,43 +328,40 @@
                     <p class="subtitle">Tổng quan</p>
                     <h2 class="h2-title">Cấu trúc Chiến lược</h2>
                 </div>
-                <!-- Updated Grid to 5 Columns or added 5th element -->
                 <div class="grid grid-cols-4 gap-6 flex-grow items-stretch">
-                    <!-- Standard Sections 1-4 -->
-                    <div class="group relative bg-white rounded-3xl p-6 border border-slate-200 shadow-card hover:shadow-hover hover:-translate-y-2 transition-all duration-300">
-                        <div class="absolute -right-4 -top-4 text-[100px] font-serif font-bold text-slate-100 z-0">1</div>
-                        <div class="relative z-10 flex flex-col h-full">
-                            <div class="w-14 h-14 rounded-2xl bg-slate-100 text-slate-600 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-flag-checkered"></i></div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Bối cảnh & Sự cấp thiết</h3>
-                            <p class="text-base text-slate-500">Phân tích vị thế hiện tại và áp lực cạnh tranh.</p>
+                    <div class="group relative bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <div class="absolute -right-2 top-0 text-[140px] leading-none font-serif font-black text-slate-100/80 z-0 select-none">1</div>
+                        <div class="relative z-10 flex flex-col h-full items-center text-center pt-4">
+                            <div class="w-20 h-20 rounded-2xl bg-slate-100 text-slate-600 flex items-center justify-center text-4xl mb-6 shadow-sm"><i class="fa-solid fa-flag-checkered"></i></div>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-3">Bối cảnh & Sự cấp thiết</h3>
+                            <p class="text-xl text-slate-500 leading-relaxed">Phân tích vị thế hiện tại và áp lực cạnh tranh.</p>
                         </div>
                     </div>
-                    <div class="group relative bg-white rounded-3xl p-6 border border-slate-200 shadow-card hover:shadow-hover hover:-translate-y-2 transition-all duration-300">
-                        <div class="absolute -right-4 -top-4 text-[100px] font-serif font-bold text-slate-100 z-0">2</div>
-                        <div class="relative z-10 flex flex-col h-full">
-                            <div class="w-14 h-14 rounded-2xl bg-[#fff8e6] text-[#e3b768] flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-bullseye"></i></div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Tầm nhìn 2030</h3>
-                            <p class="text-base text-slate-500">Định vị thương hiệu và chỉ tiêu tài chính.</p>
+                    <div class="group relative bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <div class="absolute -right-2 top-0 text-[140px] leading-none font-serif font-black text-[#fff8e6] z-0 select-none" style="color: rgba(227, 183, 104, 0.15);">2</div>
+                        <div class="relative z-10 flex flex-col h-full items-center text-center pt-4">
+                            <div class="w-20 h-20 rounded-2xl bg-[#fff8e6] text-[#e3b768] flex items-center justify-center text-4xl mb-6 shadow-sm"><i class="fa-solid fa-bullseye"></i></div>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-3">Tầm nhìn 2030</h3>
+                            <p class="text-xl text-slate-500 leading-relaxed">Định vị thương hiệu và chỉ tiêu tài chính.</p>
                         </div>
                     </div>
-                    <div class="group relative bg-white rounded-3xl p-6 border border-slate-200 shadow-card hover:shadow-hover hover:-translate-y-2 transition-all duration-300">
-                        <div class="absolute -right-4 -top-4 text-[100px] font-serif font-bold text-slate-100 z-0">3</div>
-                        <div class="relative z-10 flex flex-col h-full">
-                            <div class="w-14 h-14 rounded-2xl bg-bsc-light text-bsc-blue flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-layer-group"></i></div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Mô hình Hợp lực</h3>
-                            <p class="text-base text-slate-500">Cơ chế phối hợp và chia sẻ dữ liệu.</p>
+                    <div class="group relative bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <div class="absolute -right-2 top-0 text-[140px] leading-none font-serif font-black text-bsc-light z-0 select-none">3</div>
+                        <div class="relative z-10 flex flex-col h-full items-center text-center pt-4">
+                            <div class="w-20 h-20 rounded-2xl bg-bsc-light text-bsc-blue flex items-center justify-center text-4xl mb-6 shadow-sm"><i class="fa-solid fa-layer-group"></i></div>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-3">Mô hình Hợp lực</h3>
+                            <p class="text-xl text-slate-500 leading-relaxed">Cơ chế phối hợp và chia sẻ dữ liệu.</p>
                         </div>
                     </div>
-                    <div class="group relative bg-white rounded-3xl p-6 border border-slate-200 shadow-card hover:shadow-hover hover:-translate-y-2 transition-all duration-300">
-                        <div class="absolute -right-4 -top-4 text-[100px] font-serif font-bold text-slate-100 z-0">4</div>
-                        <div class="relative z-10 flex flex-col h-full">
-                            <div class="w-14 h-14 rounded-2xl bg-teal-50 text-bsc-teal flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-road"></i></div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Lộ trình Thực hiện</h3>
-                            <p class="text-base text-slate-500">Kế hoạch hành động và quản trị rủi ro.</p>
+                    <div class="group relative bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-hover hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                        <div class="absolute -right-2 top-0 text-[140px] leading-none font-serif font-black text-teal-50 z-0 select-none">4</div>
+                        <div class="relative z-10 flex flex-col h-full items-center text-center pt-4">
+                            <div class="w-20 h-20 rounded-2xl bg-teal-50 text-bsc-teal flex items-center justify-center text-4xl mb-6 shadow-sm"><i class="fa-solid fa-road"></i></div>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-3">Lộ trình Thực hiện</h3>
+                            <p class="text-xl text-slate-500 leading-relaxed">Kế hoạch hành động và quản trị rủi ro.</p>
                         </div>
                     </div>
                 </div>
-                <!-- New Appendix Link Section -->
                 <div class="mt-8 pt-6 border-t border-slate-200 flex justify-center">
                     <button onclick="goToSlide(18)" class="flex items-center gap-4 px-10 py-4 bg-slate-800 text-white rounded-full hover:bg-bidv-main transition-all shadow-lg hover:shadow-xl group">
                         <span class="text-2xl"><i class="fa-solid fa-database"></i></span>
@@ -452,10 +454,17 @@
                 </div>
                 <div class="flex gap-16 flex-grow pb-4 overflow-hidden">
                     <div class="w-2/3 relative flex flex-col justify-center">
-                        <div class="relative w-full h-[600px]"><canvas id="capitalChart"></canvas></div>
-                        <div class="absolute top-10 right-10 bg-white/90 backdrop-blur p-8 rounded-2xl shadow-xl border-l-[10px] border-l-[#e3b768] max-w-[350px]">
-                            <p class="text-sm text-slate-400 font-bold uppercase mb-2">Cảnh báo Chiến lược</p>
-                            <p class="text-2xl text-slate-800 leading-snug font-medium">Vốn BSC chỉ bằng <strong style="color: #e3b768; font-size: 1.2em;">1/8</strong> đối thủ dẫn đầu (TCBS).</p>
+                        <div class="relative w-full h-[600px]">
+                            <canvas id="capitalChart"></canvas>
+                            <!-- REPOSITIONED WARNING BOX -->
+                            <div class="absolute top-10 right-4 bg-white/95 backdrop-blur p-8 rounded-2xl shadow-xl border-l-[10px] border-l-[#e3b768] max-w-[320px] animate-pulse">
+                                <p class="text-sm text-slate-400 font-bold uppercase mb-2">Cảnh báo Chiến lược</p>
+                                <p class="text-2xl text-slate-800 leading-snug font-medium mb-3">Vốn BSC chỉ bằng <strong style="color: #e3b768; font-size: 1.2em;">1/8</strong> đối thủ dẫn đầu (TCBS).</p>
+                                <div class="flex items-center gap-2 text-[#e3b768] font-bold text-lg">
+                                    <i class="fa-solid fa-arrow-down-long animate-bounce"></i>
+                                    <span>Khoảng trống rủi ro</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="w-1/3 flex flex-col justify-between gap-6 overflow-y-auto pr-4">
@@ -490,27 +499,26 @@
                             <p class="text-lg text-bidv-gold mt-1 font-serif">Top đầu Ngân hàng Đầu tư & Chứng khoán Số</p>
                         </div>
                     </div>
-                    <!-- Reduced Height and Gap -->
                     <div class="grid grid-cols-4 gap-4 w-full max-w-5xl mx-auto h-[320px]">
-                        <div class="bg-bidv-light border-t-8 border-bidv-main p-4 flex flex-col items-center text-center rounded-b-lg shadow-sm hover:shadow-md transition-all">
-                            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 text-bidv-main shadow-sm"><i class="fa-solid fa-coins text-2xl"></i></div>
-                            <h4 class="text-xl font-bold text-bidv-main mb-1">VỐN</h4>
-                            <p class="text-base text-slate-600">Tăng lên 12.000 Tỷ<br>Mở rộng Margin</p>
+                        <div class="bg-bidv-light border-t-8 border-bidv-main p-6 flex flex-col items-center text-center rounded-b-lg shadow-sm hover:shadow-md transition-all">
+                            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 text-bidv-main shadow-sm"><i class="fa-solid fa-coins text-2xl"></i></div>
+                            <h4 class="text-2xl font-bold text-bidv-main mb-2">VỐN</h4>
+                            <p class="text-lg text-slate-600">Tăng lên 12.000 Tỷ<br>Mở rộng Margin</p>
                         </div>
-                        <div class="bg-[#fff8e6] border-t-8 border-bidv-gold p-4 flex flex-col items-center text-center rounded-b-lg shadow-sm hover:shadow-md transition-all">
-                            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 text-bidv-gold shadow-sm"><i class="fa-solid fa-handshake text-2xl"></i></div>
-                            <h4 class="text-xl font-bold text-bidv-gold mb-1">HỢP LỰC</h4>
-                            <p class="text-base text-slate-600">Mô hình Synergy<br>Khai thác 18M KH</p>
+                        <div class="bg-[#fff8e6] border-t-8 border-bidv-gold p-6 flex flex-col items-center text-center rounded-b-lg shadow-sm hover:shadow-md transition-all">
+                            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 text-bidv-gold shadow-sm"><i class="fa-solid fa-handshake text-2xl"></i></div>
+                            <h4 class="text-2xl font-bold text-bidv-gold mb-2">HỢP LỰC</h4>
+                            <p class="text-lg text-slate-600">Mô hình Synergy<br>Khai thác 18M KH</p>
                         </div>
-                        <div class="bg-bsc-light border-t-8 border-bsc-blue p-4 flex flex-col items-center text-center rounded-b-lg shadow-sm hover:shadow-md transition-all">
-                            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 text-bsc-blue shadow-sm"><i class="fa-solid fa-laptop-code text-2xl"></i></div>
-                            <h4 class="text-xl font-bold text-bsc-blue mb-1">CÔNG NGHỆ</h4>
-                            <p class="text-base text-slate-600">Auto Invest<br>Tài chính nhúng</p>
+                        <div class="bg-bsc-light border-t-8 border-bsc-blue p-6 flex flex-col items-center text-center rounded-b-lg shadow-sm hover:shadow-md transition-all">
+                            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 text-bsc-blue shadow-sm"><i class="fa-solid fa-laptop-code text-2xl"></i></div>
+                            <h4 class="text-2xl font-bold text-bsc-blue mb-2">CÔNG NGHỆ</h4>
+                            <p class="text-lg text-slate-600">Auto Invest<br>Tài chính nhúng</p>
                         </div>
-                        <div class="bg-[#e0f2f1] border-t-8 border-bsc-teal p-4 flex flex-col items-center text-center rounded-b-lg shadow-sm hover:shadow-md transition-all">
-                            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 text-bsc-teal shadow-sm"><i class="fa-solid fa-box-open text-2xl"></i></div>
-                            <h4 class="text-xl font-bold text-bsc-teal mb-1">SẢN PHẨM</h4>
-                            <p class="text-base text-slate-600">Quản lý Quỹ<br>Sản phẩm T+0</p>
+                        <div class="bg-[#e0f2f1] border-t-8 border-bsc-teal p-6 flex flex-col items-center text-center rounded-b-lg shadow-sm hover:shadow-md transition-all">
+                            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 text-bsc-teal shadow-sm"><i class="fa-solid fa-box-open text-2xl"></i></div>
+                            <h4 class="text-2xl font-bold text-bsc-teal mb-2">SẢN PHẨM</h4>
+                            <p class="text-lg text-slate-600">Quản lý Quỹ<br>Sản phẩm T+0</p>
                         </div>
                     </div>
                     <div class="w-full max-w-5xl mx-auto mt-4">
@@ -556,7 +564,7 @@
 
         <!-- ================= SLIDE 7: TRỤ CỘT 2 ================= -->
         <div id="slide-7" class="slide">
-            <div class="content-zone">
+             <div class="content-zone">
                 <div class="mb-8 border-b-2 border-slate-200 pb-6">
                     <p class="subtitle text-bidv-gold">Trụ cột 2</p>
                     <h2 class="h2-title">Từ "Chia sẻ" sang "Hợp lực" (Synergy)</h2>
@@ -591,71 +599,262 @@
             </div>
         </div>
 
-        <!-- ================= SLIDE 8: OPERATING MODEL ================= -->
+        <!-- ================= SLIDE 8: OPERATING MODEL (SCALED UP) ================= -->
         <div id="slide-8" class="slide">
             <div class="content-zone">
-                <div class="mb-8 border-b-2 border-slate-200 pb-6">
+                <div class="mb-8 border-b-2 border-slate-200 pb-6 flex-shrink-0">
                     <p class="subtitle">Operating Model</p>
                     <h2 class="h2-title">Cơ chế Vận hành & Tương tác</h2>
                 </div>
+                
+                <!-- Main Container: Tăng max-width lên 1600px để tràn màn hình hơn -->
                 <div class="flex-grow flex items-center justify-center">
-                    <div class="flex items-center gap-12 w-full max-w-6xl">
-                        <div class="flex-1 bg-white p-10 rounded-3xl border border-slate-200 shadow-lg text-center relative">
-                            <div class="w-24 h-24 bg-bidv-light rounded-full flex items-center justify-center mx-auto mb-6 text-bidv-main text-4xl"><i class="fa-solid fa-user-tie"></i></div>
-                            <h3 class="text-3xl font-bold text-bidv-main mb-2">BIDV Banker</h3>
-                            <p class="text-xl text-slate-500">Quan hệ Khách hàng</p>
-                            <div class="mt-6 inline-block px-4 py-2 bg-slate-100 rounded-lg font-bold text-slate-600 text-sm">KPI: Referral & Deposit</div>
+                    <div class="grid grid-cols-3 gap-16 w-full max-w-[1600px] items-stretch">
+                        
+                        <!-- Col 1: BIDV Banker -->
+                        <div class="bg-white p-16 rounded-[40px] border border-slate-200 shadow-card hover:shadow-hover transition-all text-center relative flex flex-col items-center justify-center group">
+                            <div class="w-40 h-40 bg-bidv-light rounded-full flex items-center justify-center mb-10 text-bidv-main text-7xl group-hover:scale-110 transition-transform duration-500 shadow-sm">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <h3 class="text-5xl font-bold text-bidv-main mb-4">BIDV Banker</h3>
+                            <p class="text-3xl text-slate-500 font-medium">Quan hệ Khách hàng</p>
+                            <div class="mt-10 px-8 py-4 bg-slate-100 rounded-2xl font-bold text-slate-600 text-xl w-full">
+                                KPI: Referral & Deposit
+                            </div>
                         </div>
-                        <div class="flex-1 flex flex-col gap-8 relative">
-                            <div class="bg-bidv-gold/10 p-4 rounded-xl text-center border border-bidv-gold/30"><p class="text-bidv-gold font-bold uppercase text-sm mb-1">Cơ chế</p><p class="text-xl font-bold text-slate-700">Double Counting KPI</p></div>
-                            <div class="h-1 w-full bg-slate-300 relative"><div class="absolute -top-1.5 left-0 w-3 h-3 bg-slate-400 rounded-full"></div><div class="absolute -top-1.5 right-0 w-3 h-3 bg-slate-400 rounded-full"></div></div>
-                            <div class="bg-bsc-light p-4 rounded-xl text-center border border-bsc-blue/30"><p class="text-bsc-blue font-bold uppercase text-sm mb-1">Mô hình</p><p class="text-xl font-bold text-slate-700">Dual Advisor (Tư vấn kép)</p></div>
+
+                        <!-- Col 2: Mechanism (Middle) -->
+                        <div class="flex flex-col justify-center gap-12 relative">
+                            <!-- Top Box -->
+                            <div class="bg-bidv-gold/10 p-8 rounded-3xl text-center border-2 border-bidv-gold/30">
+                                <p class="text-bidv-gold font-bold uppercase text-lg tracking-widest mb-2">Cơ chế</p>
+                                <p class="text-3xl font-bold text-slate-800">Double Counting KPI</p>
+                            </div>
+                            
+                            <!-- Connector Line -->
+                            <div class="h-1 w-full bg-slate-300 relative my-4">
+                                <div class="absolute -top-3 left-0 w-6 h-6 bg-slate-400 rounded-full border-4 border-white shadow"></div>
+                                <div class="absolute -top-3 right-0 w-6 h-6 bg-slate-400 rounded-full border-4 border-white shadow"></div>
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-white px-4 text-slate-400 text-sm font-bold uppercase tracking-widest">Kết nối dữ liệu</div>
+                            </div>
+                            
+                            <!-- Bottom Box -->
+                            <div class="bg-bsc-light p-8 rounded-3xl text-center border-2 border-bsc-blue/30">
+                                <p class="text-bsc-blue font-bold uppercase text-lg tracking-widest mb-2">Mô hình</p>
+                                <p class="text-3xl font-bold text-slate-800">Dual Advisor (Tư vấn kép)</p>
+                            </div>
                         </div>
-                        <div class="flex-1 bg-white p-10 rounded-3xl border border-slate-200 shadow-lg text-center relative">
-                            <div class="w-24 h-24 bg-bsc-light rounded-full flex items-center justify-center mx-auto mb-6 text-bsc-blue text-4xl"><i class="fa-solid fa-chart-line"></i></div>
-                            <h3 class="text-3xl font-bold text-bsc-blue mb-2">BSC Broker</h3>
-                            <p class="text-xl text-slate-500">Chuyên gia Đầu tư</p>
-                            <div class="mt-6 inline-block px-4 py-2 bg-slate-100 rounded-lg font-bold text-slate-600 text-sm">KPI: AUM & Trading</div>
+
+                        <!-- Col 3: BSC Broker -->
+                        <div class="bg-white p-16 rounded-[40px] border border-slate-200 shadow-card hover:shadow-hover transition-all text-center relative flex flex-col items-center justify-center group">
+                            <div class="w-40 h-40 bg-bsc-light rounded-full flex items-center justify-center mb-10 text-bsc-blue text-7xl group-hover:scale-110 transition-transform duration-500 shadow-sm">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h3 class="text-5xl font-bold text-bsc-blue mb-4">BSC Broker</h3>
+                            <p class="text-3xl text-slate-500 font-medium">Chuyên gia Đầu tư</p>
+                            <div class="mt-10 px-8 py-4 bg-slate-100 rounded-2xl font-bold text-slate-600 text-xl w-full">
+                                KPI: AUM & Trading
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ================= SLIDE 9: TRỤ CỘT 3 (FIXED) ================= -->
-        <div id="slide-9" class="slide">
-            <div class="content-zone">
-                <div class="mb-8 border-b-2 border-slate-200 pb-6">
-                    <p class="subtitle text-bsc-blue">Trụ cột 3</p>
-                    <h2 class="h2-title">Công nghệ: Auto Invest</h2>
+        <!-- ================= SLIDE 9: TRỤ CỘT 3 - AUTO INVEST (SCALED UP) ================= -->
+<div id="slide-9" class="slide">
+    <div class="content-zone">
+        <div class="mb-8 border-b-2 border-slate-200 pb-6 flex-shrink-0">
+            <p class="subtitle text-bsc-blue">Trụ cột 3</p>
+            <h2 class="h2-title">Công nghệ: Auto Invest</h2>
+        </div>
+        
+        <!-- Main Container: Tăng kích thước bao quanh -->
+        <div class="flex-grow flex items-center justify-center">
+            <div class="flex items-center justify-between w-full max-w-[1600px] gap-12 px-8">
+                
+                <!-- Card 1: BIDV Account (To hơn, cao hơn) -->
+                <div class="w-[500px] h-[500px] bg-white rounded-[48px] shadow-2xl border-l-[16px] border-bidv-main flex flex-col items-center justify-center z-20 relative hover:scale-105 transition-transform duration-300 group">
+                    <div class="text-bidv-main text-9xl mb-10 group-hover:rotate-12 transition-transform duration-500 drop-shadow-md">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3 class="text-4xl font-bold text-slate-800 text-center leading-tight">TK Thanh toán <br>BIDV</h3>
+                    <p class="text-slate-500 mt-4 font-medium text-2xl uppercase tracking-wider">Nguồn tiền nhàn rỗi</p>
                 </div>
-                <div class="flex-grow flex items-center justify-center">
-                    <div class="flex items-center justify-center w-full max-w-6xl px-4 gap-8">
-                        <div class="w-80 h-72 bg-white rounded-3xl shadow-card border-l-8 border-bidv-main flex flex-col items-center justify-center z-20 relative hover:scale-105 transition-transform duration-300">
-                            <div class="text-bidv-main text-6xl mb-6"><i class="fa-solid fa-building-columns"></i></div>
-                            <h3 class="text-2xl font-bold text-slate-800">TK Thanh toán BIDV</h3>
-                            <p class="text-slate-500 mt-2 font-medium">Nguồn tiền nhàn rỗi</p>
+
+                <!-- Middle Section: Arrows (Dài hơn, đậm hơn) -->
+                <div class="flex-1 h-64 relative flex flex-col justify-between py-2">
+                    <!-- Arrow Top -->
+                    <div class="relative w-full h-16">
+                        <div class="absolute top-1/2 left-0 w-full border-t-[6px] border-dashed border-bsc-blue opacity-40"></div>
+                        <div class="absolute top-1/2 right-0 -translate-y-1/2 text-bsc-blue text-4xl"><i class="fa-solid fa-chevron-right"></i></div>
+                        <div class="absolute top-[-24px] left-1/2 -translate-x-1/2 bg-bsc-blue text-white px-8 py-4 rounded-full text-xl font-bold shadow-xl whitespace-nowrap z-10 flex items-center gap-3 border-4 border-white">
+                            <i class="fa-solid fa-robot text-2xl"></i> SWEEP IN (22h00)
                         </div>
-                        <div class="flex-1 h-48 relative flex flex-col justify-between py-4">
-                            <div class="relative w-full h-12">
-                                <div class="absolute top-1/2 left-0 w-full border-t-4 border-dashed border-bsc-blue opacity-50"></div>
-                                <div class="absolute top-1/2 right-0 -translate-y-1/2 text-bsc-blue text-2xl"><i class="fa-solid fa-chevron-right"></i></div>
-                                <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 bg-bsc-blue text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg whitespace-nowrap z-10 flex items-center gap-2">
-                                    <i class="fa-solid fa-robot"></i> SWEEP IN (22h00)
-                                </div>
-                            </div>
-                            <div class="relative w-full h-12">
-                                <div class="absolute top-1/2 left-0 w-full border-t-4 border-dashed border-bsc-teal opacity-50"></div>
-                                <div class="absolute top-1/2 left-0 -translate-y-1/2 text-bsc-teal text-2xl"><i class="fa-solid fa-chevron-left"></i></div>
-                                <div class="absolute top-[-10px] left-1/2 -translate-x-1/2 bg-bsc-teal text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg whitespace-nowrap z-10 flex items-center gap-2">
-                                    <i class="fa-solid fa-bolt"></i> SWEEP OUT (Real-time)
-                                </div>
+                    </div>
+                    
+                    <!-- Arrow Bottom -->
+                    <div class="relative w-full h-16">
+                        <div class="absolute top-1/2 left-0 w-full border-t-[6px] border-dashed border-bsc-teal opacity-40"></div>
+                        <div class="absolute top-1/2 left-0 -translate-y-1/2 text-bsc-teal text-4xl"><i class="fa-solid fa-chevron-left"></i></div>
+                        <div class="absolute top-[-24px] left-1/2 -translate-x-1/2 bg-bsc-teal text-white px-8 py-4 rounded-full text-xl font-bold shadow-xl whitespace-nowrap z-10 flex items-center gap-3 border-4 border-white">
+                            <i class="fa-solid fa-bolt text-2xl"></i> SWEEP OUT (Real-time)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: BSC Account (To hơn, cao hơn) -->
+                <div class="w-[500px] h-[500px] bg-white rounded-[48px] shadow-2xl border-r-[16px] border-bsc-teal flex flex-col items-center justify-center z-20 relative hover:scale-105 transition-transform duration-300 group">
+                    <div class="text-bsc-teal text-9xl mb-10 group-hover:-rotate-12 transition-transform duration-500 drop-shadow-md">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+                    <h3 class="text-4xl font-bold text-slate-800 text-center leading-tight">Tài khoản <br>BSC</h3>
+                    <p class="text-slate-500 mt-4 font-medium text-2xl uppercase tracking-wider">Sinh lời tự động</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+        <div id="slide-10" class="slide">
+             <div class="content-zone">
+                <div class="mb-10 border-b-2 border-slate-200 pb-6">
+                    <p class="subtitle">Impact Analysis</p>
+                    <h2 class="h2-title">Tác động của Auto Invest đến BIDV</h2>
+                </div>
+                <div class="grid grid-cols-3 gap-10 h-full w-full items-start">
+                    <div class="metric-card border-t-[10px] border-t-bidv-main bg-bidv-light/30 !p-10">
+                        <div class="text-6xl text-bidv-main mb-4"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                        <div class="mb-4">
+                            <div class="text-7xl font-black text-bidv-main mb-1">5.000</div>
+                            <div class="text-3xl font-bold text-slate-700">Tỷ đồng CASA/Năm</div>
+                        </div>
+                        <p class="text-2xl text-slate-600">Huy động nguồn vốn giá rẻ tự động, không tốn chi phí nhân sự bán hàng.</p>
+                    </div>
+                    <div class="metric-card border-t-[10px] border-t-bidv-gold bg-[#fff8e6]/50 !p-10">
+                        <div class="text-6xl text-bidv-gold mb-4"><i class="fa-solid fa-percent"></i></div>
+                        <div class="mb-4">
+                            <div class="text-7xl font-black text-bidv-gold mb-1">30%</div>
+                            <div class="text-3xl font-bold text-slate-700">Tỷ trọng CASA</div>
+                        </div>
+                        <p class="text-2xl text-slate-600">Góp phần quan trọng hiện thực hóa chiến lược bán lẻ 2030 của BIDV.</p>
+                    </div>
+                    <div class="metric-card border-t-[10px] border-t-slate-800 bg-slate-100 !p-10">
+                        <div class="text-6xl text-slate-800 mb-4"><i class="fa-solid fa-infinity"></i></div>
+                        <div class="mb-4">
+                            <div class="text-6xl font-black text-slate-800 mb-1 uppercase">Gắn kết</div>
+                            <div class="text-3xl font-bold text-slate-700">Trọn đời</div>
+                        </div>
+                        <p class="text-2xl text-slate-600">Khóa chặt khách hàng trong hệ sinh thái bằng tiện ích tài chính vượt trội.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slide-11" class="slide">
+             <div class="content-zone">
+                <div class="mb-8 border-b-2 border-slate-200 pb-6">
+                    <p class="subtitle text-slate-500">Trụ cột 4</p>
+                    <h2 class="h2-title">Hoàn thiện Mảnh ghép Quản lý Quỹ</h2>
+                </div>
+                <div class="flex gap-16 h-full items-center">
+                    <div class="w-1/2 flex justify-center">
+                        <div class="w-[650px] flex flex-col gap-3">
+                            <div class="w-[45%] mx-auto bg-bidv-gold text-white flex items-center justify-center font-bold text-2xl text-center p-8 rounded-t-3xl shadow-lg">Private Banking<br>Wealth</div>
+                            <div class="w-[75%] mx-auto bg-bsc-teal text-white flex items-center justify-center font-bold text-2xl p-8 rounded-md shadow-md">Đầu tư Chuyên nghiệp (BSC)</div>
+                            <div class="w-full bg-bidv-main text-white flex items-center justify-center font-bold text-2xl p-8 rounded-b-3xl shadow-sm">Sản phẩm Ngân hàng Cơ bản</div>
+                        </div>
+                    </div>
+                    <div class="w-1/2 space-y-8">
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-center">
+                            <div class="w-16 h-16 bg-bidv-gold/20 rounded-full flex items-center justify-center text-bidv-gold text-3xl"><i class="fa-solid fa-building"></i></div>
+                            <div><h3 class="text-2xl font-bold text-slate-800">Thành lập CTQLQ</h3><p class="text-lg text-slate-600">Vốn điều lệ <strong>100 tỷ đồng</strong>. Mảnh ghép duy nhất còn thiếu.</p></div>
+                        </div>
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex gap-6 items-center">
+                            <div class="w-16 h-16 bg-bsc-blue/20 rounded-full flex items-center justify-center text-bsc-blue text-3xl"><i class="fa-solid fa-layer-group"></i></div>
+                            <div><h3 class="text-2xl font-bold text-slate-800">Sản phẩm Chuyên biệt</h3><p class="text-lg text-slate-600">Fund Wrap, Quỹ Hưu trí, Ủy thác đầu tư cho KH VIP.</p></div>
+                        </div>
+                        <div class="bg-white p-8 rounded-2xl border-l-8 border-bidv-gold shadow-md">
+                            <h3 class="text-2xl font-bold text-bidv-gold mb-2">Mục tiêu Cốt lõi</h3>
+                            <p class="text-xl text-slate-700">Giữ chân khách hàng <strong>Private Banking</strong>, ngăn dòng tiền chảy sang các quỹ ngoại.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slide-12" class="slide">
+             <div class="content-zone">
+                <div class="mb-6 border-b-2 border-slate-200 pb-6">
+                    <p class="subtitle">Financial Projections</p>
+                    <h2 class="h2-title">Hiệu quả Tài chính 2025-2030</h2>
+                </div>
+                <div class="flex gap-12 h-full pb-4">
+                    <div class="w-3/4 relative bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <canvas id="financialChart"></canvas>
+                    </div>
+                    <div class="w-1/4 flex flex-col justify-center gap-6">
+                        <div class="bg-bidv-light p-8 rounded-3xl border-t-8 border-bidv-main text-center">
+                            <div class="text-5xl font-serif font-black text-bidv-main">> 2.000</div>
+                            <p class="text-lg font-bold text-slate-600 mt-2">Tỷ đồng LNTT (2030)</p>
+                        </div>
+                        <div class="bg-[#fff8e6] p-8 rounded-3xl border-t-8 border-bidv-gold text-center">
+                            <div class="text-5xl font-serif font-black text-bidv-gold">15%</div>
+                            <p class="text-lg font-bold text-slate-600 mt-2">ROE Phục hồi</p>
+                        </div>
+                        <div class="bg-bsc-light p-8 rounded-3xl border-t-8 border-bsc-teal text-center">
+                            <div class="text-5xl font-serif font-black text-bsc-teal">25%</div>
+                            <p class="text-lg font-bold text-slate-600 mt-2">CAGR Tăng trưởng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slide-13" class="slide">
+             <div class="content-zone">
+                <div class="mb-10 border-b-2 border-slate-200 pb-6">
+                    <p class="subtitle">Kế hoạch Hành động</p>
+                    <h2 class="h2-title">Lộ trình Thực thi 2025 - 2030</h2>
+                </div>
+                <div class="flex-grow relative px-10">
+                    <div class="absolute inset-0 grid grid-cols-3 gap-12 pointer-events-none w-full h-[500px]">
+                        <div class="border-r border-dashed border-slate-200"></div>
+                        <div class="border-r border-dashed border-slate-200"></div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-12 w-full h-[500px] relative z-10">
+                        <div class="relative h-full">
+                            <div class="stair-step border-t-8 border-slate-400 w-full" style="height: 60%;">
+                                <div class="absolute -top-10 left-10 w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center text-3xl font-bold text-slate-500 border-4 border-white shadow-lg">01</div>
+                                <h3 class="text-3xl font-bold text-slate-700 mt-6 mb-2">TẠO ĐÀ</h3>
+                                <p class="text-xl font-bold text-slate-400 mb-4">2025 - 2026</p>
+                                <ul class="space-y-2 text-lg text-slate-600">
+                                    <li class="flex gap-3"><i class="fa-solid fa-check text-slate-400 mt-1"></i> Tăng vốn 12.000 tỷ</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-check text-slate-400 mt-1"></i> Kết nối KRX</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-check text-slate-400 mt-1"></i> Auto Invest</li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="w-80 h-72 bg-white rounded-3xl shadow-card border-r-8 border-bsc-teal flex flex-col items-center justify-center z-20 relative hover:scale-105 transition-transform duration-300">
-                            <div class="text-bsc-teal text-6xl mb-6"><i class="fa-solid fa-sack-dollar"></i></div>
-                            <h3 class="text-2xl font-bold text-slate-800">Tài khoản BSC</h3>
-                            <p class="text-slate-500 mt-2 font-medium">Sinh lời tự động</p>
+                        <div class="relative h-full">
+                            <div class="stair-step border-t-8 border-bidv-gold w-full" style="height: 75%;">
+                                <div class="absolute -top-10 left-10 w-20 h-20 bg-[#fff8e6] rounded-full flex items-center justify-center text-3xl font-bold text-bidv-gold border-4 border-white shadow-lg">02</div>
+                                <h3 class="text-3xl font-bold text-bidv-gold mt-6 mb-2">TỐI ƯU</h3>
+                                <p class="text-xl font-bold text-bidv-gold/60 mb-4">2027 - 2028</p>
+                                <ul class="space-y-2 text-lg text-slate-600">
+                                    <li class="flex gap-3"><i class="fa-solid fa-check text-bidv-gold mt-1"></i> Hợp lực sâu</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-check text-bidv-gold mt-1"></i> Thành lập CTQLQ</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-check text-bidv-gold mt-1"></i> LNTT > 1.000 tỷ</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="relative h-full">
+                            <div class="stair-step border-t-8 border-bidv-main w-full" style="height: 90%;">
+                                <div class="absolute -top-10 left-10 w-20 h-20 bg-bidv-light rounded-full flex items-center justify-center text-3xl font-bold text-bidv-main border-4 border-white shadow-lg">03</div>
+                                <h3 class="text-3xl font-bold text-bidv-main mt-6 mb-2">DẪN ĐẦU</h3>
+                                <p class="text-xl font-bold text-bidv-main/60 mb-4">2029 - 2030</p>
+                                <ul class="space-y-2 text-lg text-slate-600">
+                                    <li class="flex gap-3"><i class="fa-solid fa-check text-bidv-main mt-1"></i> Top đầu NH Đầu tư</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-check text-bidv-main mt-1"></i> Hệ sinh thái số</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-check text-bidv-main mt-1"></i> LNTT > 2.000 tỷ</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -815,47 +1014,123 @@
             </div>
         </div>
 
-        <!-- ================= SLIDE 14: RỦI RO (COMPACT FIX) ================= -->
+        <!-- ================= SLIDE 14: RISK MATRIX (C-LEVEL STYLE) ================= -->
         <div id="slide-14" class="slide">
             <div class="content-zone">
-                <div class="mb-4 border-b-2 border-slate-200 pb-4 flex justify-between items-end">
-                    <div><p class="subtitle text-bidv-gold">Kiểm soát & An toàn</p><h2 class="h2-title">Ma trận Quản trị Rủi ro</h2></div>
-                    <div class="flex gap-6 text-lg font-bold text-slate-500">
-                        <span class="flex items-center gap-2"><span class="w-4 h-4 bg-red-500 rounded"></span> CRITICAL</span>
-                        <span class="flex items-center gap-2"><span class="w-4 h-4 bg-yellow-400 rounded"></span> MONITOR</span>
+                <!-- Header Section -->
+                <div class="mb-6 border-b border-slate-200 pb-4 flex justify-between items-end">
+                    <div>
+                        <p class="subtitle text-bidv-gold uppercase tracking-widest text-sm font-bold mb-2">Kiểm soát & An toàn</p>
+                        <h2 class="h2-title text-5xl text-bidv-main">Ma trận Quản trị Rủi ro</h2>
+                    </div>
+                    <!-- Legend tinh tế -->
+                    <div class="flex gap-8 text-sm font-semibold text-slate-500 bg-white px-6 py-3 rounded-full shadow-sm border border-slate-100">
+                        <div class="flex items-center gap-2"><span class="w-2 h-2 bg-rose-600 rounded-full"></span> Cao</div>
+                        <div class="flex items-center gap-2"><span class="w-2 h-2 bg-amber-500 rounded-full"></span> Trung bình</div>
+                        <div class="flex items-center gap-2"><span class="w-2 h-2 bg-bidv-main rounded-full"></span> Thấp</div>
                     </div>
                 </div>
-                <div class="flex-grow relative pl-12 pb-20">
-                    <div class="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-slate-400 font-bold tracking-[0.3em] text-sm whitespace-nowrap origin-center">XÁC SUẤT</div>
-                    <div class="grid grid-cols-2 grid-rows-2 gap-6 h-full max-h-[550px]">
-                        <div class="risk-box risk-monitor">
-                            <div class="flex justify-between mb-2"><span class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-lg text-sm font-bold">MONITOR</span><span class="text-4xl font-serif font-bold text-yellow-300 opacity-50">II</span></div>
-                            <h3 class="text-2xl font-bold text-slate-800">Rủi ro Công nghệ</h3>
-                            <p class="text-lg text-slate-600">Hệ thống KRX hoặc MTrader chậm tiến độ.</p>
-                            <div class="mt-auto pt-4 border-t border-yellow-200 text-yellow-700 font-bold italic">👉 Plan B: Outsourcing / Quy trình thủ công</div>
-                        </div>
-                        <div class="risk-box risk-critical shadow-lg relative overflow-hidden">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-full"></div>
-                            <div class="flex justify-between mb-4 relative z-10"><span class="px-3 py-1 bg-red-500 text-white rounded-lg font-bold animate-pulse">CRITICAL</span><span class="text-4xl font-serif font-bold text-red-300 opacity-50">I</span></div>
-                            <div class="space-y-4 relative z-10">
-                                <div><h3 class="text-2xl font-bold text-red-900 mb-1"><i class="fa-solid fa-triangle-exclamation mr-2"></i>Vốn & Thanh khoản</h3><p class="text-lg text-slate-700">Thị trường sập, Margin Call diện rộng.</p><p class="text-base text-red-600 font-bold mt-1">→ Buffer Vốn >180% + Hạn mức BIDV</p></div>
-                                <div><h3 class="text-2xl font-bold text-red-900 mb-1"><i class="fa-solid fa-user-shield mr-2"></i>Cạnh tranh</h3><p class="text-lg text-slate-700">Đối thủ Zero-fee, tăng vốn mạnh.</p><p class="text-base text-red-600 font-bold mt-1">→ USP: Hệ sinh thái Độc quyền</p></div>
+                
+                <!-- Main Layout -->
+                <!-- Giữ nguyên padding -->
+                <div class="flex-grow relative flex flex-col justify-center pb-24 pl-20 pr-4">
+                    
+                    <!-- TRỤC TUNG (Y-AXIS): XÁC SUẤT -->
+                    <!-- SỬA: Đổi bottom-32 thành bottom-36 để khớp với trục hoành mới -->
+                    <div class="absolute left-0 top-10 bottom-36 w-16 flex flex-col justify-center items-center border-r-2 border-slate-300 border-dashed">
+                        <span class="-rotate-90 text-slate-400 font-bold tracking-[0.3em] text-sm whitespace-nowrap absolute">XÁC SUẤT (PROBABILITY)</span>
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 text-slate-300"><i class="fa-solid fa-caret-up text-xl"></i></div>
+                    </div>
+
+                    <!-- TRỤC HOÀNH (X-AXIS): ẢNH HƯỞNG -->
+                    <!-- SỬA: Đổi bottom-20 thành bottom-8 để hạ xuống, tránh bị nội dung che -->
+                    <div class="absolute bottom-8 left-20 right-4 h-12 flex items-center justify-center border-t-2 border-slate-300 border-dashed">
+                        <span class="text-slate-400 font-bold tracking-[0.3em] text-sm mt-6 bg-[#f8fafc] px-4 z-10">MỨC ĐỘ ẢNH HƯỞNG (IMPACT)</span>
+                        <div class="absolute right-0 top-[-11px] text-slate-300"><i class="fa-solid fa-caret-right text-xl"></i></div>
+                    </div>
+
+                    <!-- MATRIX GRID -->
+                    <div class="grid grid-cols-2 gap-6 w-full h-full max-h-[580px] relative z-10">
+                        
+                        <!-- Q2: CAO/THẤP - MONITOR (GOLD Theme) -->
+                        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border-t-4 border-amber-500 relative overflow-hidden flex flex-col">
+                            <div class="absolute right-0 top-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><i class="fa-solid fa-eye text-9xl text-amber-500"></i></div>
+                            <div class="flex justify-between items-start mb-4 relative z-10">
+                                <span class="px-3 py-1 bg-amber-50 text-amber-700 border border-amber-200 rounded text-xs font-bold tracking-wider uppercase">Monitor</span>
+                                <span class="text-4xl font-serif font-bold text-slate-200">II</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2 group-hover:text-amber-600 transition-colors">Rủi ro Công nghệ</h3>
+                            <p class="text-base text-slate-500 mb-6 leading-relaxed flex-grow">Hệ thống giao dịch lõi (KRX) chậm tiến độ hoặc gián đoạn, ảnh hưởng trải nghiệm khách hàng.</p>
+                            <div class="pt-4 border-t border-slate-100">
+                                <div class="flex items-center gap-3 text-amber-700 font-semibold text-sm">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span>Plan B: Outsourcing & Quy trình thủ công</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="risk-box risk-accept">
-                            <div class="flex justify-between mb-2"><span class="px-3 py-1 bg-green-200 text-green-800 rounded-lg text-sm font-bold">ACCEPT</span><span class="text-4xl font-serif font-bold text-green-300 opacity-50">III</span></div>
-                            <h3 class="text-2xl font-bold text-slate-800 mb-2">Rủi ro Vận hành</h3>
-                            <p class="text-lg text-slate-600">Lỗi quy trình nghiệp vụ nhỏ lẻ.</p>
-                            <div class="mt-auto pt-4 border-t border-green-200 text-green-700 font-bold italic">👉 Kiểm soát: Tự động hóa RPA</div>
+
+                        <!-- Q1: CAO/CAO - CRITICAL (ROSE/BURGUNDY Theme) -->
+                        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border-t-4 border-rose-600 relative overflow-hidden flex flex-col">
+                            <div class="absolute right-0 top-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><i class="fa-solid fa-triangle-exclamation text-9xl text-rose-600"></i></div>
+                            <div class="flex justify-between items-start mb-4 relative z-10">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-700 border border-rose-200 rounded text-xs font-bold tracking-wider uppercase flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-rose-600 rounded-full animate-pulse"></span> Critical
+                                </span>
+                                <span class="text-4xl font-serif font-bold text-slate-200">I</span>
+                            </div>
+                            <div class="space-y-4 flex-grow relative z-10">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-800 group-hover:text-rose-700 transition-colors">Vốn & Thanh khoản</h3>
+                                    <p class="text-sm text-slate-500 mt-1">Rủi ro Margin Call diện rộng khi thị trường biến động mạnh.</p>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-800 group-hover:text-rose-700 transition-colors">Cạnh tranh thị phần</h3>
+                                    <p class="text-sm text-slate-500 mt-1">Áp lực từ chính sách Zero-fee của đối thủ.</p>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-slate-100 mt-4">
+                                <div class="flex items-center gap-3 text-rose-700 font-semibold text-sm">
+                                    <i class="fa-solid fa-fire-extinguisher"></i>
+                                    <span>Giải pháp: Buffer Vốn >180% + USP Độc quyền</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="risk-box risk-manage">
-                            <div class="flex justify-between mb-2"><span class="px-3 py-1 bg-blue-200 text-blue-800 rounded-lg text-sm font-bold">MANAGE</span><span class="text-4xl font-serif font-bold text-blue-300 opacity-50">IV</span></div>
-                            <h3 class="text-2xl font-bold text-slate-800 mb-2">An ninh Mạng</h3>
-                            <p class="text-lg text-slate-600">Tấn công hệ thống (Cyber Attack).</p>
-                            <div class="mt-auto pt-4 border-t border-blue-200 text-blue-700 font-bold italic">👉 Đầu tư SOC + Bảo mật đa lớp</div>
+
+                        <!-- Q3: THẤP/THẤP - ACCEPT (TEAL/BIDV Theme) -->
+                        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border-t-4 border-bidv-main relative overflow-hidden flex flex-col">
+                            <div class="absolute right-0 top-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><i class="fa-solid fa-clipboard-check text-9xl text-bidv-main"></i></div>
+                            <div class="flex justify-between items-start mb-4 relative z-10">
+                                <span class="px-3 py-1 bg-teal-50 text-teal-800 border border-teal-200 rounded text-xs font-bold tracking-wider uppercase">Accept</span>
+                                <span class="text-4xl font-serif font-bold text-slate-200">III</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2 group-hover:text-bidv-main transition-colors">Rủi ro Vận hành</h3>
+                            <p class="text-base text-slate-500 mb-6 leading-relaxed flex-grow">Các lỗi tác nghiệp thủ công nhỏ lẻ, sai sót con người trong quy trình giấy tờ.</p>
+                            <div class="pt-4 border-t border-slate-100">
+                                <div class="flex items-center gap-3 text-bidv-main font-semibold text-sm">
+                                    <i class="fa-solid fa-robot"></i>
+                                    <span>Kiểm soát: Tự động hóa RPA toàn diện</span>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Q4: THẤP/CAO - MANAGE (NAVY/SLATE Theme) -->
+                        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border-t-4 border-slate-600 relative overflow-hidden flex flex-col">
+                            <div class="absolute right-0 top-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><i class="fa-solid fa-shield-virus text-9xl text-slate-600"></i></div>
+                            <div class="flex justify-between items-start mb-4 relative z-10">
+                                <span class="px-3 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-xs font-bold tracking-wider uppercase">Manage</span>
+                                <span class="text-4xl font-serif font-bold text-slate-200">IV</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2 group-hover:text-slate-700 transition-colors">An ninh Mạng</h3>
+                            <p class="text-base text-slate-500 mb-6 leading-relaxed flex-grow">Nguy cơ tấn công hệ thống (Cyber Attack), rò rỉ dữ liệu khách hàng.</p>
+                            <div class="pt-4 border-t border-slate-100">
+                                <div class="flex items-center gap-3 text-slate-700 font-semibold text-sm">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <span>Đầu tư SOC + Bảo mật đa lớp</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 text-slate-400 font-bold tracking-[0.3em] text-sm">MỨC ĐỘ ẢNH HƯỞNG</div>
                 </div>
             </div>
         </div>
@@ -1619,7 +1894,6 @@
             window.addEventListener('resize', resizeSlide);
             resizeSlide();
 
-            // === CHART INITIALIZATION (Existing charts for Slide 4 & 12) ===
             Chart.register(ChartDataLabels);
             
             // Chart 1: Capital Comparison (Slide 4)
@@ -1643,7 +1917,19 @@
                         title: { display: true, text: 'SO SÁNH QUY MÔ VỐN CHỦ SỞ HỮU (TỶ ĐỒNG)', font: { size: 24, family: "'Inter', sans-serif", weight: '600' }, color: '#64748b', align: 'start', padding: { bottom: 40 } },
                         datalabels: { anchor: 'end', align: 'top', formatter: (val) => val.toLocaleString(), font: { family: "'Inter', sans-serif", weight: 'bold', size: 20 }, color: '#94a3b8' }
                     },
-                    scales: { y: { beginAtZero: true, grid: { borderDash: [6, 6] } }, x: { grid: { display: false } } },
+                    scales: { 
+                        y: { 
+                            beginAtZero: true, 
+                            grid: { display: false, drawBorder: false }, // GRID REMOVED
+                            border: { display: false },
+                            ticks: { font: { size: 16, weight: 'bold', family: "'Inter', sans-serif" }, color: '#64748b' } // BIGGER TEXT
+                        }, 
+                        x: { 
+                            grid: { display: false, drawBorder: false }, // GRID REMOVED
+                            border: { display: false },
+                            ticks: { font: { size: 16, weight: 'bold', family: "'Inter', sans-serif" }, color: '#334155' } // BIGGER TEXT
+                        } 
+                    },
                     animation: { duration: 1500 }
                 }
             });
@@ -1655,8 +1941,26 @@
                 data: {
                     labels: ['2025', '2026', '2027', '2028', '2029', '2030'],
                     datasets: [
-                        { label: 'LNTT (Tỷ đồng)', data: [650, 950, 1350, 1700, 2150, 2600], backgroundColor: '#0b5855', order: 2, yAxisID: 'y' },
-                        { label: 'ROE (%)', data: [11.9, 7.9, 10.5, 12.2, 13.8, 14.8], borderColor: '#e3b768', backgroundColor: '#e3b768', type: 'line', borderWidth: 4, pointBackgroundColor: '#fff', pointBorderWidth: 3, pointRadius: 8, order: 1, yAxisID: 'y1' }
+                        { 
+                            label: 'LNTT (Tỷ đồng)', 
+                            data: [650, 950, 1350, 1700, 2150, 2600], 
+                            backgroundColor: '#0b5855', 
+                            order: 2, 
+                            yAxisID: 'y' 
+                        },
+                        { 
+                            label: 'ROE (%)', 
+                            data: [11.9, 7.9, 10.5, 12.2, 13.8, 14.8], 
+                            borderColor: '#e3b768', 
+                            backgroundColor: '#e3b768', 
+                            type: 'line', 
+                            borderWidth: 4, 
+                            pointBackgroundColor: '#fff', 
+                            pointBorderWidth: 3, 
+                            pointRadius: 8, 
+                            order: 1, 
+                            yAxisID: 'y1' 
+                        }
                     ]
                 },
                 options: {
@@ -1664,12 +1968,46 @@
                     maintainAspectRatio: false,
                     plugins: {
                         legend: { position: 'bottom', labels: { font: { size: 16 } } },
-                        datalabels: { display: true, color: (ctx) => ctx.dataset.type === 'line' ? '#e3b768' : '#fff', anchor: 'end', align: 'top', font: { weight: 'bold', size: 14 }, formatter: (val) => val.toLocaleString() }
+                        datalabels: { 
+                            display: true, 
+                            // Màu sắc: Line màu vàng, Bar màu trắng để hiện rõ trên nền xanh
+                            color: (ctx) => ctx.dataset.type === 'line' ? '#e3b768' : '#fff', 
+                            // Neo tại đỉnh cột hoặc điểm dữ liệu
+                            anchor: 'end', 
+                            // Căn chỉnh: 
+                            // - Line: 'top' (nằm phía trên điểm neo -> bên ngoài)
+                            // - Bar: 'start' (nằm phía trong điểm neo -> bên trong, sát vạch trên)
+                            align: (ctx) => ctx.dataset.type === 'line' ? 'top' : 'start', 
+                            // Đẩy xuống một chút (4px) để không bị dính sát mép cột
+                            offset: 4,
+                            font: { weight: 'bold', size: 16 }, 
+                            formatter: (val) => val.toLocaleString() 
+                        }
                     },
                     scales: {
-                        y: { position: 'left', title: { display: true, text: 'Lợi nhuận (Tỷ)' }, grid: { borderDash: [5,5] } },
-                        y1: { position: 'right', title: { display: true, text: 'ROE (%)' }, grid: { display: false } },
-                        x: { grid: { display: false } }
+                        y: { 
+                            position: 'left', 
+                            title: { display: false }, 
+                            grid: { display: false, drawBorder: false }, // BỎ GRID
+                            border: { display: false },
+                            ticks: { 
+                                font: { size: 16, weight: 'bold', family: "'Inter', sans-serif" }, // CHỮ TO
+                                color: '#64748b'
+                            } 
+                        },
+                        y1: { 
+                            position: 'right', 
+                            display: false, // ẨN TRỤC ROE
+                            grid: { display: false } 
+                        },
+                        x: { 
+                            grid: { display: false, drawBorder: false }, // BỎ GRID
+                            border: { display: false },
+                            ticks: { 
+                                font: { size: 16, weight: 'bold', family: "'Inter', sans-serif" }, // CHỮ TO
+                                color: '#334155'
+                            }
+                        }
                     },
                     animation: { duration: 1500 }
                 }
