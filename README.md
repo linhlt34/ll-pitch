@@ -1,29 +1,61 @@
-# 🚀 Chiến lược Tái định vị BSC: Vượt Sóng Chuyển Đổi (2026-2030)
+🚀 Chiến lược Chuyển đổi số & Tái định vị: Vượt Sóng 2026-2030
 
-Đây là kho lưu trữ (repository) chứa bài thuyết trình (Pitch Deck) chính thức.
+Chào mừng đến với kho lưu trữ (repository) chính thức của Bộ slide Thuyết trình Chiến lược (Strategic Pitch Deck). Dự án này được thiết kế để trình bày tầm nhìn, lộ trình phát triển và các giải pháp tài chính trọng tâm cho giai đoạn 2026 - 2030.
 
----
+🔗 1. Truy cập & Trình chiếu
 
-## 🔗 1. TRUY CẬP & TRÌNH CHIẾU
+Bài thuyết trình này không sử dụng PowerPoint truyền thống mà được xây dựng hoàn toàn bằng công nghệ web (HTML5, Tailwind CSS, Chart.js). Điều này mang lại:
 
-Bài thuyết trình này được xây dựng bằng HTML/CSS (Tailwind CSS, Chart.js) để đảm bảo tính tương tác, độ sắc nét cao và trải nghiệm động.
+Độ phân giải không giới hạn: Sắc nét trên mọi màn hình từ laptop đến máy chiếu 4K.
 
-### 🌐 Link Trình chiếu Công khai (GitHub Pages)
+Tính tương tác cao: Biểu đồ động, hiệu ứng chuyển cảnh mượt mà.
 
-**Click vào link sau để xem bài thuyết trình phiên bản mới nhất:**
+Dễ dàng chia sẻ: Chỉ cần một đường link duy nhất.
 
-[**https://linhlt34.github.io/ll-pitch/**](https://linhlt34.github.io/ll-pitch/)
+🌐 Link Trình chiếu Trực tuyến (Live Demo)
 
-*(Link này tự động cập nhật sau mỗi lần chỉnh sửa và push lên nhánh `main`)*
+Bạn có thể xem phiên bản mới nhất tại đây (tự động cập nhật từ nhánh main):
 
-### 🖥️ Hướng dẫn Trình chiếu Nhanh
+👉 Xem bài thuyết trình tại đây
 
-| Thao tác | Phím tắt/Hành động |
-| :--- | :--- |
-| **Chuyển Slide Tiếp** | Mũi tên phải (→) hoặc Click vào nút phải dưới màn hình. |
-| **Quay lại Slide** | Mũi tên trái (←) hoặc Click vào nút trái dưới màn hình. |
-| **Toàn màn hình (Fullscreen)** | Nhấn **F11** trên trình duyệt (Chrome/Edge). |
-## 🛠️2. Dành cho Nhà phát triển/Chỉnh sửa
+🖥️ 2. Hướng dẫn Điều khiển
 
-* **Công nghệ:** HTML5, Tailwind CSS, Chart.js (Interactive Data Visualization).
-* **Cách cập nhật:** Chỉnh sửa file `index.html` và sử dụng các lệnh Git để cập nhật:
+Giao diện được tối ưu hóa cho trải nghiệm thuyết trình liền mạch.
+
+Thao tác
+
+Phím tắt / Hành động
+
+Mô tả
+
+Chuyển Slide Tiếp
+
+Mũi tên Phải (→) hoặc Click chuột vào vùng bên phải
+
+Di chuyển sang nội dung kế tiếp.
+
+Quay lại Slide
+
+Mũi tên Trái (←)
+
+Quay lại nội dung trước đó.
+
+Nhảy đến Slide bất kỳ
+
+Nhập số trang vào ô ở thanh điều hướng dưới cùng
+
+Di chuyển nhanh đến slide cụ thể (ví dụ: gõ 18 để đến Phụ lục).
+
+Xem Phụ lục (Data)
+
+Esc hoặc Click nút Phụ lục
+
+Mở nhanh danh sách bảng biểu và biểu đồ chi tiết.
+
+Toàn màn hình
+
+F11 (Windows) hoặc Cmd + Ctrl + F (Mac)
+
+Ẩn thanh trình duyệt để tập trung hoàn toàn vào nội dung.
+
+Mẹo: Sử dụng chế độ toàn màn hình (F11) để có trải nghiệm
