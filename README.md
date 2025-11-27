@@ -1,124 +1,90 @@
-🚀 Chiến lược Chuyển đổi số & Tái định vị: Vượt Sóng 2026-2030
+# 🚀 Chiến lược Chuyển đổi số & Tái định vị: Vượt Sóng 2026-2030
 
-Chào mừng đến với kho lưu trữ (repository) chính thức của Bộ slide Thuyết trình Chiến lược (Strategic Pitch Deck). Dự án này được thiết kế để trình bày tầm nhìn, lộ trình phát triển và các giải pháp tài chính trọng tâm cho giai đoạn 2026 - 2030.
+**Digital Pitch Deck** - Phiên bản kỹ thuật số trình bày tầm nhìn chiến lược và dữ liệu tài chính theo phong cách hiện đại, trực quan và tương tác cao.
 
-🔗 1. Truy cập & Trình chiếu
+Chào mừng đến với kho lưu trữ chính thức của bộ slide thuyết trình chiến lược. Dự án này thay thế các file PowerPoint tĩnh truyền thống bằng trải nghiệm web mượt mà, tối ưu cho việc trình chiếu trên mọi thiết bị.
 
-Bài thuyết trình này không sử dụng PowerPoint truyền thống mà được xây dựng hoàn toàn bằng công nghệ web (HTML5, Tailwind CSS, Chart.js). Điều này mang lại:
+---
 
-Độ phân giải không giới hạn: Sắc nét trên mọi màn hình từ laptop đến máy chiếu 4K.
+## 🔗 Truy cập & Trình chiếu
 
-Tính tương tác cao: Biểu đồ động, hiệu ứng chuyển cảnh mượt mà.
+Không cần cài đặt phần mềm. Bạn có thể trình chiếu ngay lập tức.
 
-Dễ dàng chia sẻ: Chỉ cần một đường link duy nhất.
+| Trạng thái | Liên kết | Ghi chú |
+|------------|----------|---------|
+| 🟢 **Live Demo** | **[👉 BẤM VÀO ĐÂY ĐỂ XEM SLIDE](https://linhlt34.github.io/ll-pitch/)** | Link này luôn cập nhật bản mới nhất |
+| 🔄 Cập nhật | `Ctrl + F5` (Win) / `Cmd + Shift + R` (Mac) | Xóa cache nếu chưa thấy nội dung mới |
 
-🌐 Link Trình chiếu Trực tuyến (Live Demo)
+---
 
-Bạn có thể xem phiên bản mới nhất tại đây (tự động cập nhật từ nhánh main):
+## 🖥️ Hướng dẫn Điều khiển (Dành cho Người thuyết trình)
 
-👉 Xem bài thuyết trình tại đây
+Giao diện được thiết kế tối giản để bạn tập trung vào nội dung.
 
-🖥️ 2. Hướng dẫn Điều khiển
+### 🎮 Các phím tắt cơ bản
 
-Giao diện được tối ưu hóa cho trải nghiệm thuyết trình liền mạch.
+| Thao tác | Phím tắt / Hành động |
+|----------|---------------------|
+| **Chuyển Slide Tiếp** | Phím Mũi tên **Phải** `→` hoặc Click chuột vào vùng bên phải màn hình |
+| **Quay lại Slide** | Phím Mũi tên **Trái** `←` hoặc Click chuột vào vùng bên trái màn hình |
+| **Nhảy đến trang** | Nhập số trang vào ô điều hướng bên dưới rồi nhấn `Enter` |
+| **Chế độ Toàn màn hình** | Nhấn `F11` (Windows) hoặc `Cmd + Ctrl + F` (Mac) |
 
-Thao tác
+> **💡 Mẹo Pro:** Hãy luôn bật chế độ Toàn màn hình (`F11`) để ẩn thanh địa chỉ trình duyệt, mang lại trải nghiệm hình ảnh sắc nét và chuyên nghiệp nhất.
 
-Phím tắt / Hành động
+---
 
-Mô tả
+## ✍️ Hướng dẫn Chỉnh sửa Trực tiếp trên GitHub (Dành cho mọi người)
 
-Chuyển Slide Tiếp
+Bạn có thể sửa lỗi chính tả hoặc cập nhật số liệu **trực tiếp trên trình duyệt** mà không cần cài đặt bất kỳ công cụ lập trình nào.
 
-Mũi tên Phải (→) hoặc Click chuột vào vùng bên phải
+### 🔹 Bước 1: Mở trình chỉnh sửa
 
-Di chuyển sang nội dung kế tiếp.
+1. Truy cập vào [**trang chủ của kho lưu trữ này**](https://github.com/linhlt34/ll-pitch) trên GitHub
+2. Nhấn phím **dấu chấm** `.` trên bàn phím
+3. Trình duyệt sẽ chuyển sang giao diện **github.dev** (giống VS Code)
 
-Quay lại Slide
+> **Hoặc:** Thay `github.com` thành `github.dev` trong thanh địa chỉ
 
-Mũi tên Trái (←)
+### 🔹 Bước 2: Tìm và sửa nội dung
 
-Quay lại nội dung trước đó.
+1. Ở cột bên trái, tìm và bấm vào file `index.html` (hoặc file `.html` tương ứng)
+2. Sử dụng tổ hợp phím `Ctrl + F` (hoặc `Cmd + F`) để tìm đoạn văn bản cần sửa
+3. Sửa lại nội dung nằm giữa các dấu ngoặc nhọn `>...<`
+   - **Ví dụ:** Đổi `>12.000 tỷ<` thành `>15.000 tỷ<`
 
-Nhảy đến Slide bất kỳ
+### 🔹 Bước 3: Lưu và Xuất bản (Quan trọng!)
 
-Nhập số trang vào ô ở thanh điều hướng dưới cùng
+1. Nhìn sang thanh công cụ dọc bên trái cùng
+2. Bấm vào biểu tượng **thứ 3 từ trên xuống** (Source Control - hình cây thư mục có chấm tròn)
+3. Gõ một dòng ghi chú ngắn gọn vào ô **Message**
+   - Ví dụ: *"Cập nhật số liệu doanh thu Q3"*
+4. Bấm nút **Commit & Push** (hoặc dấu tích ✔️)
 
-Di chuyển nhanh đến slide cụ thể (ví dụ: gõ 18 để đến Phụ lục).
+✅ **Xong!** Hệ thống sẽ tự động cập nhật. Bạn chờ khoảng **1-2 phút** rồi vào [link trình chiếu](https://linhlt34.github.io/ll-pitch/) để kiểm tra.
 
-Xem Phụ lục (Data)
+---
 
-Esc hoặc Click nút Phụ lục
+## 🛠️ Dành cho Đội ngũ Kỹ thuật (Developer Guide)
 
-Mở nhanh danh sách bảng biểu và biểu đồ chi tiết.
+Thông tin chi tiết cho việc bảo trì, nâng cấp code và triển khai.
 
-Toàn màn hình
+### 📂 Cấu trúc Dự án
 
-F11 (Windows) hoặc Cmd + Ctrl + F (Mac)
+project-root/ ├── index.html # Source code chính (HTML/CSS/JS logic) ├── assets/ # Thư mục chứa tài nguyên │ ├── images/ # Hình ảnh, icon, logo │ └── data/ # Dữ liệu biểu đồ (nếu tách riêng) └── README.md # Tài liệu hướng dẫn này
 
-Ẩn thanh trình duyệt để tập trung hoàn toàn vào nội dung.
+### 💻 Stack Công nghệ
 
-Mẹo: Sử dụng chế độ toàn màn hình (F11) để có trải nghiệm trình chiếu chuyên nghiệp nhất.
+- **Core:** HTML5 Semantic, Vanilla JavaScript (ES6+)
+- **Styling:** Tailwind CSS (sử dụng CDN cho tốc độ triển khai nhanh)
+- **Visualization:** Chart.js (Biểu đồ động), FontAwesome 6 (Icon set)
 
-🛠️ 3. Dành cho Nhà phát triển (Developer Guide)
+### ⚙️ Quy trình Cập nhật (Local Dev)
 
-Nếu bạn muốn tùy biến, chỉnh sửa nội dung hoặc cấu trúc của bài thuyết trình, vui lòng tham khảo hướng dẫn dưới đây.
-
-Cấu trúc Thư mục
-
-project-root/
-├── index.html       # File chính chứa toàn bộ mã nguồn (HTML/CSS/JS)
-├── assets/          # Thư mục chứa hình ảnh và biểu đồ tĩnh
-│   ├── chart1.png
-│   ├── chart2.png
-│   └── ...
-└── README.md        # Tài liệu hướng dẫn này
-
-
-Công nghệ Sử dụng
-
-Core: HTML5
-
-Styling: Tailwind CSS (CDN) - Không cần cài đặt Node.js hay build tool phức tạp.
-
-Logic & Animation: Vanilla JavaScript.
-
-Biểu đồ: Chart.js & Chartjs-plugin-datalabels (CDN).
-
-Icons: FontAwesome 6 (CDN).
-
-Cách Cập nhật Nội dung
-
-Clone Repository về máy:
-
-git clone [https://github.com/linhlt34/ll-pitch.git](https://github.com/linhlt34/ll-pitch.git)
-
-
-Chỉnh sửa:
-
-Mở file index.html bằng Visual Studio Code (hoặc editor bất kỳ).
-
-Tìm đến các section <!-- SLIDE X --> để sửa nội dung văn bản tương ứng.
-
-Để cập nhật ảnh biểu đồ, thay thế file trong thư mục assets/ (giữ nguyên tên file hoặc cập nhật đường dẫn trong thẻ <img>).
-
-Xem trước (Preview):
-
-Cài đặt extension Live Server trên VS Code.
-
-Chuột phải vào index.html -> chọn Open with Live Server.
-
-Đẩy code lên GitHub (Deploy):
-
+**Clone repository:**
+```bash
+git clone https://github.com/linhlt34/ll-pitch.git
+Chạy thử: Sử dụng Extension Live Server trên VS Code để xem trước. Deploy:
 git add .
-git commit -m "Cập nhật nội dung slide..."
+git commit -m "Update slides content"
 git push origin main
-
-
-Sau khi push, GitHub Pages sẽ tự động cập nhật website sau 1-2 phút.
-
-📞 Liên hệ & Hỗ trợ
-
-Nếu gặp vấn đề về hiển thị hoặc cần hỗ trợ kỹ thuật, vui lòng tạo Issue trên repository này hoặc liên hệ trực tiếp với người quản trị.
-
-© 2025 Strategic Presentation Project.
